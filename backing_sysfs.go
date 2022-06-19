@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/Emposat/usb/gusb"
 	"github.com/apex/log"
-	"github.com/pzl/usb/gusb"
 )
 
 // @todo: usbfs fallback?

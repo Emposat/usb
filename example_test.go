@@ -3,7 +3,7 @@ package usb_test
 import (
 	"fmt"
 
-	"github.com/pzl/usb"
+	"github.com/Emposat/usb"
 )
 
 func ExampleList() {

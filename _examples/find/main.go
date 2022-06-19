@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/pzl/usb"
+	"github.com/Emposat/usb"
 )
 
 /*

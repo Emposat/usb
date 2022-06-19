@@ -3,10 +3,10 @@ package usb
 //go:generate go run -tags generate gen.go
 
 import (
+	"github.com/Emposat/usb/gusb"
 	"github.com/apex/log"
 	"github.com/apex/log/handlers/cli"
 	"github.com/apex/log/handlers/text"
-	"github.com/pzl/usb/gusb"
 )
 
 func init() {

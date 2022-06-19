@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/pzl/usb/gusb"
+	"github.com/Emposat/usb/gusb"
 )
 
 type backingUsbfs struct{}

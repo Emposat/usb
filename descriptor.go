@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"strconv"
 
+	"github.com/Emposat/usb/gusb"
 	"github.com/apex/log"
-	"github.com/pzl/usb/gusb"
 )
 
 /* ---------- Descriptors to library-native objects ---------- */
@@ -57,14 +57,15 @@ func toDevice(dd gusb.DeviceDescriptor) *Device {
 		}
 	}
 
-	d.Vendor.nameFromDevice, err = d.dataSource.getVendorName(*d)
-	if err != nil {
-		log.WithError(err).Error("problem fetching manufacturer name")
-	}
-	d.Product.nameFromDevice, err = d.dataSource.getProductName(*d)
-	if err != nil {
-		log.WithError(err).Error("problem fetching product name")
-	}
+	// Fix for SDRplay
+	d.Vendor.nameFromDevice, _ = d.dataSource.getVendorName(*d)
+	// if err != nil {
+	// 	log.WithError(err).Error("problem fetching manufacturer name")
+	// }
+	d.Product.nameFromDevice, _ = d.dataSource.getProductName(*d)
+	// if err != nil {
+	// 	log.WithError(err).Error("problem fetching product name")
+	// }
 	d.Port, err = d.dataSource.getPort(*d)
 	if err != nil {
 		log.WithError(err).Error("problem fetching device port number")

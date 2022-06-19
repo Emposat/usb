@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pzl/usb"
+	"github.com/Emposat/usb"
 )
 
 func main() {
